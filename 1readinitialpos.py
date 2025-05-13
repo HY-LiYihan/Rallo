@@ -3,10 +3,10 @@ from tkinter import messagebox
 from rapid_utils.rapidnode import RapidNode
 import time
 import json
-import pyperclip  # 用于操作剪贴板
+# import pyperclip  # 用于操作剪贴板
 
 # 初始化 RapidNode
-rallo = RapidNode(config_path='args/rallo_init.json', port='/dev/ttyUSB0', init_set=False)
+rallo = RapidNode(config_path='args/rallo_init.json', port='COM11', init_set=False)
 
 # 创建 Tkinter 窗口
 root = tk.Tk()
@@ -51,7 +51,7 @@ def save_pose():
 
         # 将平均值保存到剪贴板
         avg_joint_angles_str = str(avg_joint_angles)
-        pyperclip.copy(avg_joint_angles_str)
+        # pyperclip.copy(avg_joint_angles_str)
         print(f"平均关节角已保存到剪贴板: {avg_joint_angles_str}")
 
         # 弹出对话框询问是否存入 args/rallo.json
