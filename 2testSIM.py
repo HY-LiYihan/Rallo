@@ -11,7 +11,7 @@ model_path = "third_party/mujoco_menagerie/universal_robots_ur10e/ur10e.xml"  # 
 model = mujoco.MjModel.from_xml_path(model_path)
 data = mujoco.MjData(model)
 
-zreopos=[0,-1.57,1.57,-1.57,-1.57,0]
+zreopos = [0, -1.57, 1.57, 0, 1.57, 0]
 # 主循环：从 RapidNode 读取控制信号并更新 MuJoCo 模型
 with mujoco.viewer.launch_passive(model, data) as viewer:
     while viewer.is_running():

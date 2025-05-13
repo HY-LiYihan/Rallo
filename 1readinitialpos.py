@@ -6,7 +6,7 @@ import json
 # import pyperclip  # 用于操作剪贴板
 
 # 初始化 RapidNode
-rallo = RapidNode(config_path='args/rallo_init.json', port='COM11', init_set=False)
+rallo = RapidNode(config_path='args/rallo_init.json', port='/dev/ttyUSB0', init_set=False)
 
 # 创建 Tkinter 窗口
 root = tk.Tk()

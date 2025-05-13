@@ -36,7 +36,7 @@ def torque_to_current(torque, torque_constant):
 
 if __name__ == '__main__':
     try:
-        rallo_node = RalloNode(config_path='args/rallo.json')
+        rallo_node = RalloNode(config_path='args/rallo.json',port="/dev/ttyUSB0")
 
         # 关节和棍子的物理参数 (你需要根据你的实际情况修改这些值)
         motor_index_2 = 1  # 控制第二个关节 (索引从 0 开始)
